@@ -203,6 +203,10 @@
 
 /* ── Responsive ────────────────────────────────────────────── */
 @media (max-width: 480px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
   .project-content {
     padding: var(--space-5);
   }
