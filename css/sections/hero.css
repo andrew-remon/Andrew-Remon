@@ -164,6 +164,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  width: fit-content;
+  margin-inline: auto;
   animation: scaleIn 0.8s ease 0.3s both;
 }
 
@@ -218,6 +220,7 @@
   position: absolute;
   bottom: 20px;
   left: -10px;
+  width: max-content;
   background: var(--bg-secondary);
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
@@ -330,14 +333,6 @@
   .hero-photo-frame {
     width: clamp(220px, 55vw, 320px);
   }
-
-  .hero-badge {
-    left: 0;
-  }
-
-  .hero-badge-2 {
-    right: 0;
-  }
 }
 
 @media (max-width: 480px) {
@@ -358,7 +353,29 @@
   }
 
   .hero-badge, .hero-badge-2 {
-    display: none;
+    padding: var(--space-2) var(--space-3);
+  }
+
+  .hero-badge {
+    bottom: 10px;
+    left: -5px;
+  }
+
+  .hero-badge-2 {
+    top: 10px;
+    right: -5px;
+  }
+
+  .hero-badge-icon {
+    font-size: 1.1rem;
+  }
+
+  .hero-badge-title {
+    font-size: 0.65rem;
+  }
+
+  .hero-badge-sub {
+    font-size: 0.55rem;
   }
 
   .hero-photo-frame {
