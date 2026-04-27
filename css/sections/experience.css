@@ -1,0 +1,128 @@
+/* ============================================================
+   EXPERIENCE.CSS — Experience & Education Timeline
+   Andrew Remon Portfolio
+   ============================================================ */
+
+#experience {
+  position: relative;
+}
+
+.timeline {
+  position: relative;
+  max-width: 800px;
+  margin: var(--space-8) auto 0;
+  padding-left: var(--space-8);
+}
+
+/* Vertical Line */
+.timeline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 11px; /* Center of the dot */
+  width: 2px;
+  background: var(--border);
+  border-radius: 2px;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: var(--space-8);
+}
+
+.timeline-item:last-child {
+  margin-bottom: 0;
+}
+
+/* Timeline Dot */
+.timeline-dot {
+  position: absolute;
+  left: calc(var(--space-8) * -1);
+  top: 6px;
+  width: 24px;
+  height: 24px;
+  background: var(--bg-primary);
+  border: 4px solid var(--color-primary);
+  border-radius: 50%;
+  box-shadow: 0 0 0 4px var(--bg-primary);
+  z-index: 1;
+  transition: transform var(--transition-spring), box-shadow var(--transition-base), background-color var(--transition-base);
+}
+
+.timeline-item:hover .timeline-dot {
+  transform: scale(1.2);
+  background: var(--color-primary);
+  box-shadow: 0 0 0 4px var(--bg-primary), 0 0 12px rgba(29, 158, 117, 0.4);
+}
+
+/* Content Box */
+.timeline-content {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-5) var(--space-6);
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition-spring), box-shadow var(--transition-base), border-color var(--transition-base);
+}
+
+.timeline-item:hover .timeline-content {
+  transform: translateX(4px);
+  box-shadow: var(--shadow-md);
+  border-color: rgba(29, 158, 117, 0.3);
+}
+
+.timeline-date {
+  display: inline-block;
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--color-primary);
+  margin-bottom: var(--space-2);
+  padding: 0.25rem 0.75rem;
+  background: var(--bg-accent);
+  border-radius: var(--radius-full);
+}
+
+.timeline-title {
+  font-size: var(--text-xl);
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 2px;
+}
+
+.timeline-subtitle {
+  font-size: var(--text-base);
+  font-weight: 500;
+  color: var(--text-secondary);
+  margin-bottom: var(--space-3);
+}
+
+.timeline-desc {
+  font-size: var(--text-base);
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.timeline-desc strong {
+  color: var(--text-primary);
+}
+
+/* ── Responsive ────────────────────────────────────────────── */
+@media (max-width: 600px) {
+  .timeline {
+    padding-left: var(--space-6);
+  }
+  .timeline::before {
+    left: 7px;
+  }
+  .timeline-dot {
+    left: calc(var(--space-6) * -1);
+    width: 16px;
+    height: 16px;
+    border-width: 3px;
+    top: 8px;
+  }
+  .timeline-content {
+    padding: var(--space-4) var(--space-5);
+  }
+}

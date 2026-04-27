@@ -1,0 +1,150 @@
+/* ============================================================
+   ABOUT.CSS — About Section
+   Andrew Remon Portfolio
+   ============================================================ */
+
+#about {
+  position: relative;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: var(--space-12);
+  align-items: start;
+}
+
+/* ── Left: Story Text ──────────────────────────────────────── */
+.about-text {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+.about-text p {
+  font-size: var(--text-lg);
+  color: var(--text-secondary);
+  line-height: 1.8;
+}
+
+/* Quote style for the origin story */
+.about-quote {
+  position: relative;
+  padding-left: var(--space-6);
+  border-left: 4px solid var(--color-primary);
+  background: linear-gradient(to right, rgba(29, 158, 117, 0.05), transparent);
+  padding-block: var(--space-4);
+  border-radius: 0 var(--radius-md) var(--radius-md) 0;
+}
+
+.about-quote p {
+  color: var(--text-primary);
+  font-weight: 500;
+  font-size: var(--text-xl);
+  font-style: italic;
+  line-height: 1.6;
+}
+
+.about-quote::before {
+  content: '"';
+  position: absolute;
+  top: -10px;
+  left: 15px;
+  font-size: 4rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  opacity: 0.2;
+  font-family: serif;
+  line-height: 1;
+}
+
+.highlight-text {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+/* ── Right: Fun Facts / Info Cards ─────────────────────────── */
+.about-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.info-card {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-5);
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition-spring), box-shadow var(--transition-base);
+}
+
+.info-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+  border-color: rgba(29, 158, 117, 0.3);
+}
+
+.info-card-header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  margin-bottom: var(--space-3);
+}
+
+.info-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-md);
+  background: var(--bg-accent);
+  color: var(--color-primary);
+}
+
+.info-title {
+  font-size: var(--text-base);
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+/* Facts List */
+.fact-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.fact-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.fact-emoji {
+  font-size: 1.2rem;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
+}
+
+.fact-text {
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+/* Languages Row */
+.lang-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin-top: var(--space-2);
+}
+
+/* ── Responsive ────────────────────────────────────────────── */
+@media (max-width: 900px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-8);
+  }
+}

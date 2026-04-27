@@ -1,0 +1,160 @@
+/* ============================================================
+   ANIMATIONS.CSS — Keyframes & Scroll Reveal
+   Andrew Remon Portfolio
+   ============================================================ */
+
+/* ── Keyframes ─────────────────────────────────────────────── */
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(28px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeDown {
+  from { opacity: 0; transform: translateY(-20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeLeft {
+  from { opacity: 0; transform: translateX(28px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes fadeRight {
+  from { opacity: 0; transform: translateX(-28px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes scaleIn {
+  from { opacity: 0; transform: scale(0.90); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+@keyframes slideInRight {
+  from { opacity: 0; transform: translateX(40px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(-10px); }
+}
+
+@keyframes pulse-ring {
+  0%   { transform: scale(1);    opacity: 0.6; }
+  100% { transform: scale(1.6);  opacity: 0; }
+}
+
+@keyframes shimmer {
+  0%   { background-position: -200% center; }
+  100% { background-position:  200% center; }
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0; }
+}
+
+@keyframes gradientShift {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* ── Page Load ─────────────────────────────────────────────── */
+.page-loaded {
+  animation: fadeIn 0.5s ease forwards;
+}
+
+/* ── Scroll Reveal ─────────────────────────────────────────── */
+/* Elements start hidden; JS adds .is-visible when in viewport */
+
+[data-reveal], [data-reveal-group] > * {
+  opacity: 1; /* Fallback: visible if JS fails */
+  transition:
+    opacity 0.65s cubic-bezier(0.4, 0, 0.2, 1),
+    transform 0.65s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+[data-reveal="up"] {
+  transform: translateY(32px);
+}
+
+[data-reveal="down"] {
+  transform: translateY(-24px);
+}
+
+[data-reveal="left"] {
+  transform: translateX(32px);
+}
+
+[data-reveal="right"] {
+  transform: translateX(-32px);
+}
+
+[data-reveal="scale"] {
+  transform: scale(0.92);
+}
+
+[data-reveal].is-visible {
+  opacity: 1;
+  transform: translate(0) scale(1);
+}
+
+/* Staggered children */
+[data-reveal-group] > * {
+  opacity: 1;
+  transform: translateY(24px);
+  transition:
+    opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+    transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+[data-reveal-group].is-visible > *:nth-child(1)  { transition-delay: 0.05s; opacity: 1; transform: none; }
+[data-reveal-group].is-visible > *:nth-child(2)  { transition-delay: 0.12s; opacity: 1; transform: none; }
+[data-reveal-group].is-visible > *:nth-child(3)  { transition-delay: 0.19s; opacity: 1; transform: none; }
+[data-reveal-group].is-visible > *:nth-child(4)  { transition-delay: 0.26s; opacity: 1; transform: none; }
+[data-reveal-group].is-visible > *:nth-child(5)  { transition-delay: 0.33s; opacity: 1; transform: none; }
+[data-reveal-group].is-visible > *:nth-child(6)  { transition-delay: 0.40s; opacity: 1; transform: none; }
+
+/* ── Utility Classes ───────────────────────────────────────── */
+.animate-float {
+  animation: float 5s ease-in-out infinite;
+}
+
+.animate-pulse-ring::before {
+  content: '';
+  position: absolute;
+  inset: -4px;
+  border-radius: inherit;
+  background: var(--color-primary);
+  animation: pulse-ring 2s ease-out infinite;
+  z-index: -1;
+}
+
+.animate-gradient {
+  background-size: 200% 200%;
+  animation: gradientShift 4s ease infinite;
+}
+
+/* ── Reduced Motion ────────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  [data-reveal],
+  [data-reveal-group] > *,
+  .animate-float,
+  .animate-pulse-ring::before {
+    transition: none !important;
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}

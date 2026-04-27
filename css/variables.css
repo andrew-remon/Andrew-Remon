@@ -1,0 +1,117 @@
+/* ============================================================
+   VARIABLES.CSS — Design Tokens
+   Andrew Remon Portfolio
+   ============================================================ */
+
+:root {
+  /* ── Light Mode Colors ─────────────────────────────────── */
+  --bg-primary:      #F8FAFB;
+  --bg-secondary:    #FFFFFF;
+  --bg-accent:       #E1F5EE;
+  --bg-nav:          rgba(248, 250, 251, 0.85);
+
+  --text-primary:    #042C53;
+  --text-secondary:  #3A5A7C;
+  --text-muted:      #6B8BA4;
+
+  --color-primary:   #1D9E75;
+  --color-primary-hover: #18886A;
+  --color-cta:       #185FA5;
+  --color-cta-hover: #0E4A82;
+
+  --border:          #D8E2EB;
+  --border-light:    #EBF1F6;
+
+  /* ── Gradients ─────────────────────────────────────────── */
+  --gradient-hero:   linear-gradient(135deg, #F8FAFB 0%, #EAF4FF 50%, #E1F5EE 100%);
+  --gradient-primary: linear-gradient(135deg, #1D9E75, #185FA5);
+  --gradient-cta:    linear-gradient(135deg, #185FA5, #1D9E75);
+
+  /* ── Shadows ───────────────────────────────────────────── */
+  --shadow-sm:    0 1px 3px rgba(4, 44, 83, 0.06), 0 1px 2px rgba(4, 44, 83, 0.04);
+  --shadow-md:    0 4px 12px rgba(4, 44, 83, 0.08), 0 2px 6px rgba(4, 44, 83, 0.05);
+  --shadow-lg:    0 12px 32px rgba(4, 44, 83, 0.12), 0 4px 12px rgba(4, 44, 83, 0.07);
+  --shadow-xl:    0 24px 48px rgba(4, 44, 83, 0.15), 0 8px 20px rgba(4, 44, 83, 0.08);
+  --shadow-primary: 0 8px 24px rgba(29, 158, 117, 0.25);
+  --shadow-cta:   0 8px 24px rgba(24, 95, 165, 0.25);
+
+  /* ── Typography ────────────────────────────────────────── */
+  --font-family:  'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-mono:    'JetBrains Mono', 'Fira Code', 'Courier New', monospace;
+
+  --text-xs:   0.75rem;    /* 12px */
+  --text-sm:   0.875rem;   /* 14px */
+  --text-base: 1rem;       /* 16px */
+  --text-lg:   1.125rem;   /* 18px */
+  --text-xl:   1.25rem;    /* 20px */
+  --text-2xl:  1.5rem;     /* 24px */
+  --text-3xl:  1.875rem;   /* 30px */
+  --text-4xl:  2.25rem;    /* 36px */
+  --text-5xl:  3rem;       /* 48px */
+  --text-hero: clamp(2.5rem, 5vw, 4rem);
+  --text-section: clamp(1.75rem, 3vw, 2.5rem);
+
+  /* ── Spacing ───────────────────────────────────────────── */
+  --space-1:   0.25rem;
+  --space-2:   0.5rem;
+  --space-3:   0.75rem;
+  --space-4:   1rem;
+  --space-5:   1.25rem;
+  --space-6:   1.5rem;
+  --space-8:   2rem;
+  --space-10:  2.5rem;
+  --space-12:  3rem;
+  --space-16:  4rem;
+  --space-20:  5rem;
+  --space-24:  6rem;
+
+  /* ── Border Radius ─────────────────────────────────────── */
+  --radius-sm:   0.375rem;
+  --radius-md:   0.625rem;
+  --radius-lg:   1rem;
+  --radius-xl:   1.5rem;
+  --radius-2xl:  2rem;
+  --radius-full: 9999px;
+
+  /* ── Transitions ───────────────────────────────────────── */
+  --transition-fast:   150ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-base:   250ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow:   400ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-spring: 300ms cubic-bezier(0.34, 1.56, 0.64, 1);
+
+  /* ── Layout ────────────────────────────────────────────── */
+  --container-max:  1140px;
+  --nav-height:     72px;
+  --section-padding: clamp(4rem, 8vw, 7rem);
+}
+
+/* ── Dark Mode Tokens ──────────────────────────────────────── */
+[data-theme="dark"] {
+  --bg-primary:      #0B1622;
+  --bg-secondary:    #132238;
+  --bg-accent:       #0F2E24;
+  --bg-nav:          rgba(11, 22, 34, 0.90);
+
+  --text-primary:    #E8EDF2;
+  --text-secondary:  #8BA3BE;
+  --text-muted:      #5C7A96;
+
+  --color-primary:   #2BC48E;
+  --color-primary-hover: #22A87A;
+  --color-cta:       #4A9FE5;
+  --color-cta-hover: #6BB8F0;
+
+  --border:          #1E3450;
+  --border-light:    #162B42;
+
+  --gradient-hero:   linear-gradient(135deg, #0B1622 0%, #0F1F38 50%, #0B2418 100%);
+  --gradient-primary: linear-gradient(135deg, #2BC48E, #4A9FE5);
+  --gradient-cta:    linear-gradient(135deg, #4A9FE5, #2BC48E);
+
+  --shadow-sm:    0 1px 3px rgba(0, 0, 0, 0.25), 0 1px 2px rgba(0, 0, 0, 0.20);
+  --shadow-md:    0 4px 12px rgba(0, 0, 0, 0.30), 0 2px 6px rgba(0, 0, 0, 0.20);
+  --shadow-lg:    0 12px 32px rgba(0, 0, 0, 0.40), 0 4px 12px rgba(0, 0, 0, 0.25);
+  --shadow-xl:    0 24px 48px rgba(0, 0, 0, 0.50), 0 8px 20px rgba(0, 0, 0, 0.30);
+  --shadow-primary: 0 8px 24px rgba(43, 196, 142, 0.30);
+  --shadow-cta:   0 8px 24px rgba(74, 159, 229, 0.30);
+}

@@ -1,0 +1,91 @@
+/* ============================================================
+   BASE.CSS — Global Element Styles
+   Andrew Remon Portfolio
+   ============================================================ */
+
+body {
+  font-family: var(--font-family);
+  font-size: var(--text-base);
+  line-height: 1.6;
+  color: var(--text-primary);
+  background-color: var(--bg-primary);
+  transition:
+    background-color var(--transition-slow),
+    color var(--transition-slow);
+}
+
+/* ── Headings ──────────────────────────────────────────────── */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--text-primary);
+  transition: color var(--transition-slow);
+}
+
+/* ── Links ─────────────────────────────────────────────────── */
+a {
+  color: var(--color-cta);
+  transition: color var(--transition-fast), opacity var(--transition-fast);
+}
+
+a:hover {
+  color: var(--color-cta-hover);
+  opacity: 0.85;
+}
+
+/* ── Paragraphs ────────────────────────────────────────────── */
+p {
+  color: var(--text-secondary);
+  line-height: 1.75;
+  transition: color var(--transition-slow);
+}
+
+/* ── Selection ─────────────────────────────────────────────── */
+::selection {
+  background-color: var(--color-primary);
+  color: #fff;
+}
+
+/* ── Scrollbar ─────────────────────────────────────────────── */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-primary);
+  border-radius: var(--radius-full);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-primary-hover);
+}
+
+/* ── Horizontal Rule ───────────────────────────────────────── */
+hr {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: var(--space-8) 0;
+}
+
+/* ── Code / Mono ───────────────────────────────────────────── */
+code {
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  background: var(--bg-accent);
+  color: var(--color-primary);
+  padding: 0.15em 0.4em;
+  border-radius: var(--radius-sm);
+}
+
+/* ── Theme Transition Overlay ──────────────────────────────── */
+body.theme-transitioning * {
+  transition:
+    background-color var(--transition-slow),
+    color var(--transition-slow),
+    border-color var(--transition-slow),
+    box-shadow var(--transition-slow) !important;
+}

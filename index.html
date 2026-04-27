@@ -1,0 +1,1023 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+  <!-- ═══════════════════════════════════════════════════════
+       META & SEO
+  ═══════════════════════════════════════════════════════ -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <title>Andrew Remon — CS Sophomore · Backend, Systems & Security</title>
+  <meta name="description"
+    content="Andrew Remon is a CS sophomore at Cairo University exploring backend systems, security, and low-level computing. Open to internships." />
+  <meta name="author" content="Andrew Remon" />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#1D9E75" />
+
+  <!-- Open Graph (LinkedIn, Slack, etc.) -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Andrew Remon — CS Sophomore Portfolio" />
+  <meta property="og:description"
+    content="Backend · Systems · Security enthusiast. Sophomore at Cairo University. Open to internships." />
+  <meta property="og:image" content="assets/images/og-preview.png" />
+  <meta property="og:url" content="https://andrew-remon.github.io" />
+  <meta property="og:site_name" content="Andrew Remon Portfolio" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Andrew Remon — CS Sophomore Portfolio" />
+  <meta name="twitter:description" content="Backend · Systems · Security enthusiast. Sophomore at Cairo University." />
+  <meta name="twitter:image" content="assets/images/og-preview.png" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg" />
+  <link rel="icon" type="image/png" href="assets/images/favicon.png" />
+  <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Devicons (tech logos) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/devicon.min.css" />
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/variables.css" />
+  <link rel="stylesheet" href="css/reset.css" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/layout.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+  <link rel="stylesheet" href="css/nav.css" />
+  <link rel="stylesheet" href="css/sections/hero.css" />
+  <link rel="stylesheet" href="css/sections/about.css" />
+  <link rel="stylesheet" href="css/sections/skills.css" />
+  <link rel="stylesheet" href="css/sections/projects.css" />
+  <link rel="stylesheet" href="css/sections/learning.css" />
+  <link rel="stylesheet" href="css/sections/experience.css" />
+  <link rel="stylesheet" href="css/sections/blog.css" />
+  <link rel="stylesheet" href="css/sections/contact.css" />
+
+
+  <!-- Prevent FOUC on dark mode -->
+  <script>
+    (function () {
+      const saved = localStorage.getItem('ar-portfolio-theme');
+      const pref = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      document.documentElement.setAttribute('data-theme', saved || pref);
+    })();
+  </script>
+</head>
+
+<body>
+
+  <!-- Skip to Content (Accessibility) -->
+  <a href="#hero" class="skip-link">Skip to main content</a>
+
+  <!-- ═══════════════════════════════════════════════════════
+       NAVIGATION
+  ═══════════════════════════════════════════════════════ -->
+  <header id="navbar" role="banner">
+    <nav class="nav-inner" aria-label="Main navigation">
+
+      <!-- Logo -->
+      <a href="#hero" class="nav-logo" aria-label="Andrew Remon — Home">
+        <div class="nav-logo-mark" aria-hidden="true">AR</div>
+        <span class="nav-logo-text">Andrew Remon</span>
+      </a>
+
+      <!-- Desktop Links -->
+      <ul class="nav-links" role="list">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#learning">Learning</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#blog">Blog</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+
+      <!-- Actions -->
+      <div class="nav-actions">
+        <!-- Dark Mode Toggle -->
+        <button id="theme-toggle" aria-label="Switch to dark mode" title="Toggle theme">
+          <!-- Sun Icon (shown in dark mode) -->
+          <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="5" />
+            <line x1="12" y1="1" x2="12" y2="3" />
+            <line x1="12" y1="21" x2="12" y2="23" />
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+            <line x1="1" y1="12" x2="3" y2="12" />
+            <line x1="21" y1="12" x2="23" y2="12" />
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+          </svg>
+          <!-- Moon Icon (shown in light mode) -->
+          <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+          </svg>
+        </button>
+
+        <!-- Hamburger (mobile) -->
+        <button id="hamburger" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobile-menu">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Mobile Menu Overlay -->
+  <div id="menu-overlay" aria-hidden="true"></div>
+
+  <!-- Mobile Drawer -->
+  <nav id="mobile-menu" aria-label="Mobile navigation">
+    <a href="#about" class="mobile-nav-link">About</a>
+    <a href="#skills" class="mobile-nav-link">Skills</a>
+    <a href="#projects" class="mobile-nav-link">Projects</a>
+    <a href="#learning" class="mobile-nav-link">Learning</a>
+    <a href="#education" class="mobile-nav-link">Education</a>
+    <a href="#experience" class="mobile-nav-link">Experience</a>
+    <a href="#blog" class="mobile-nav-link">Blog</a>
+    <a href="#contact" class="mobile-nav-link">Contact</a>
+  </nav>
+
+  <!-- ═══════════════════════════════════════════════════════
+       MAIN CONTENT
+  ═══════════════════════════════════════════════════════ -->
+  <main id="main-content">
+
+    <!-- ─── SECTION 1: HERO ─────────────────────────────── -->
+    <section id="hero" aria-label="Introduction">
+      <!-- Background decorations -->
+      <div class="hero-bg-dots" aria-hidden="true"></div>
+      <div class="hero-bg-shape hero-bg-shape--1" aria-hidden="true"></div>
+      <div class="hero-bg-shape hero-bg-shape--2" aria-hidden="true"></div>
+
+      <div class="hero-inner">
+
+        <!-- Left: Content -->
+        <div class="hero-content">
+          <!-- Greeting pill -->
+          <div class="hero-greeting" aria-hidden="true">
+            <span class="hero-greeting-dot"></span>
+            Hello, I'm
+          </div>
+
+          <!-- Name -->
+          <h1 class="hero-name">
+            Andrew<br /><span>Remon</span>
+          </h1>
+
+          <!-- Tagline -->
+          <p class="hero-tagline">
+            CS Sophomore &nbsp;·&nbsp;
+            <strong>Backend · Systems · Security</strong> Explorer
+          </p>
+
+          <!-- Bio -->
+          <p class="hero-bio">
+            Driven by a simple question — <em>"How can such a small machine perform complex calculations in mere
+              fractions of a second?"</em> — I study computers from the inside out. Currently at Cairo University,
+            building things, breaking things, and learning why they work.
+          </p>
+          <p
+            style="font-style: italic; color: var(--color-primary); margin-bottom: var(--space-6); font-weight: 600; font-size: var(--text-lg); letter-spacing: 0.5px;">
+            "Stay Hungry, Stay Foolish."
+          </p>
+
+          <!-- CTAs -->
+          <div class="hero-cta">
+            <a href="#projects" class="btn btn-primary" id="hero-cta-work">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="2" y="3" width="20" height="14" rx="2" />
+                <polyline points="8 21 12 17 16 21" />
+              </svg>
+              View My Work
+            </a>
+            <a href="Andrew_Remon_Resume.pdf" download class="btn btn-outline" id="hero-cta-resume">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                <polyline points="7 10 12 15 17 10" />
+                <line x1="12" y1="15" x2="12" y2="3" />
+              </svg>
+              Download Résumé
+            </a>
+          </div>
+
+          <!-- Social Links -->
+          <div class="hero-social">
+            <span class="hero-social-label">Find me on</span>
+            <a href="https://github.com/andrew-remon" target="_blank" rel="noopener noreferrer" class="social-link"
+              aria-label="GitHub Profile" data-tooltip="GitHub">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path
+                  d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0 0 22 12.017C22 6.484 17.522 2 12 2z" />
+              </svg>
+            </a>
+            <a href="https://www.linkedin.com/in/andrewremon/" target="_blank" rel="noopener noreferrer"
+              class="social-link" aria-label="LinkedIn Profile" data-tooltip="LinkedIn">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path
+                  d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+              </svg>
+            </a>
+            <a href="https://leetcode.com/u/andrewremon/" target="_blank" rel="noopener noreferrer" class="social-link"
+              aria-label="LeetCode Profile" data-tooltip="LeetCode">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path
+                  d="M13.483 0a1.374 1.374 0 0 0-.961.438L7.116 6.226l-3.854 4.126a5.266 5.266 0 0 0-1.209 2.104 5.35 5.35 0 0 0-.125.513 5.527 5.527 0 0 0 .062 2.362 5.83 5.83 0 0 0 .349 1.017 5.939 5.939 0 0 0 1.271 1.543l3.995 3.739 6.253 5.851a2.25 2.25 0 0 0 2.895.007l1.373-1.286a2.25 2.25 0 0 0 .007-2.896l-7.071-6.619a.403.403 0 0 1 .012-.601l1.884-1.748a.401.401 0 0 1 .554.015l6.541 6.136a2.25 2.25 0 0 0 2.896.007l1.372-1.286a2.25 2.25 0 0 0 .007-2.896L14.233 4.298 14.444 4.1 14.444 4.1l3.524-3.238a1.375 1.375 0 0 0-.482-2.316 1.376 1.376 0 0 0-.923.109 1.37 1.37 0 0 0-.583.582l-2.497 2.296-2.5 2.296a.403.403 0 0 1-.555-.015l-.013-.014a.401.401 0 0 1-.014-.554l2.498-2.296 2.499-2.296a1.375 1.375 0 0 0-.441-2.348 1.373 1.373 0 0 0-.961-.438z" />
+              </svg>
+            </a>
+            <a href="mailto:andrewremon2005@outlook.com" class="social-link" aria-label="Send Email"
+              data-tooltip="Email">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" aria-hidden="true">
+                <rect x="2" y="4" width="20" height="16" rx="2" />
+                <polyline points="22,7 12,13 2,7" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Right: Photo -->
+        <div class="hero-photo-wrap">
+          <div class="hero-photo-frame">
+            <img src="assets/images/andrew-hero.jpg" alt="Andrew Remon — CS student at Cairo University"
+              class="hero-photo" loading="eager" width="420" height="420" />
+          </div>
+
+          <!-- Floating Badge 1 -->
+          <div class="hero-badge" aria-hidden="true">
+            <span class="hero-badge-icon">🎓</span>
+            <div class="hero-badge-text">
+              <span class="hero-badge-title">Cairo University</span>
+              <span class="hero-badge-sub">CS · Class of 2028</span>
+            </div>
+          </div>
+
+          <!-- Floating Badge 2 -->
+          <div class="hero-badge hero-badge-2" aria-hidden="true">
+            <span class="hero-badge-icon">💻</span>
+            <div class="hero-badge-text">
+              <span class="hero-badge-title">Open to Internships</span>
+              <span class="hero-badge-sub">Backend · Systems</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ─── SECTION 2: ABOUT ─────────────────────────────── -->
+    <section id="about" aria-label="About Me">
+      <div class="container">
+        <div class="section-header" data-reveal="up">
+          <span class="section-label">About Me</span>
+          <h2 class="section-title">The Story <span>Behind the Code</span></h2>
+          <div class="section-divider"></div>
+        </div>
+
+        <div class="about-grid">
+          <!-- Story -->
+          <div class="about-text" data-reveal-group>
+            <div class="about-quote">
+              <p>"How can such a small machine perform complex calculations in mere fractions of a second?"</p>
+            </div>
+
+            <p>
+              That single question sparked a curiosity that led me to explore the evolution and development of
+              computers. Now, as an analytical <span class="highlight-text">CS sophomore at Cairo University (Class of
+                2028)</span>, I'm diving deep into the foundations of computing to understand exactly how things work
+              from the ground up.
+            </p>
+
+            <p>
+              I'm constantly pushing myself to explore under-the-hood operations. I find myself drawn to the
+              intersections of <span class="highlight-text">Backend Development, Security, and Systems
+                Programming</span>. Instead of just using frameworks, I want to build the efficient, secure systems that
+              power them.
+            </p>
+          </div>
+
+          <!-- Sidebar / Facts -->
+          <div class="about-sidebar" data-reveal="left" data-delay="200">
+            <!-- Hobbies -->
+            <div class="info-card">
+              <div class="info-card-header">
+                <div class="info-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <path d="M8 14s1.5 2 4 2 4-2 4-2"></path>
+                    <line x1="9" y1="9" x2="9.01" y2="9"></line>
+                    <line x1="15" y1="9" x2="15.01" y2="9"></line>
+                  </svg>
+                </div>
+                <h3 class="info-title">Beyond the Screen</h3>
+              </div>
+              <div class="fact-list">
+                <div class="fact-item">
+                  <span class="fact-emoji">⚽</span>
+                  <span class="fact-text">Football</span>
+                </div>
+                <div class="fact-item">
+                  <span class="fact-emoji">📚</span>
+                  <span class="fact-text">Reading</span>
+                </div>
+                <div class="fact-item">
+                  <span class="fact-emoji">✍️</span>
+                  <span class="fact-text">Writing</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Languages -->
+            <div class="info-card">
+              <div class="info-card-header">
+                <div class="info-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                  </svg>
+                </div>
+                <h3 class="info-title">Languages Spoken</h3>
+              </div>
+              <div class="lang-row">
+                <span class="badge badge-green">Arabic (Native)</span>
+                <span class="badge badge-blue">English (B1)</span>
+                <span class="badge badge-neutral">French (B2)</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── SECTION 3: SKILLS ────────────────────────────── -->
+    <section id="skills" class="section-alt" aria-label="Skills">
+      <div class="container">
+        <div class="section-header" data-reveal="up">
+          <span class="section-label">Tech Stack</span>
+          <h2 class="section-title">What I <span>Work With</span></h2>
+          <div class="section-divider"></div>
+        </div>
+
+        <div class="skills-grid">
+          <!-- Category 1: Languages -->
+          <div class="skill-category" data-reveal="up" data-delay="0">
+            <div class="category-header">
+              <div class="category-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="16 18 22 12 16 6"></polyline>
+                  <polyline points="8 6 2 12 8 18"></polyline>
+                </svg>
+              </div>
+              <h3 class="category-title">Languages</h3>
+            </div>
+            <div class="skill-list">
+              <div class="skill-pill"><i class="devicon-cplusplus-plain colored"></i><span>C++</span></div>
+              <div class="skill-pill"><i class="devicon-python-plain colored"></i><span>Python</span></div>
+              <div class="skill-pill"><i class="devicon-java-plain colored"></i><span>Java</span></div>
+              <div class="skill-pill"><i class="devicon-mysql-plain colored"></i><span>SQL</span></div>
+            </div>
+          </div>
+
+          <!-- Category 2: Tools -->
+          <div class="skill-category" data-reveal="up" data-delay="100">
+            <div class="category-header">
+              <div class="category-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path
+                    d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z">
+                  </path>
+                </svg>
+              </div>
+              <h3 class="category-title">Tools & Infra</h3>
+            </div>
+            <div class="skill-list">
+              <div class="skill-pill"><i class="devicon-git-plain colored"></i><span>Git</span></div>
+              <div class="skill-pill"><i class="devicon-github-original colored"></i><span>GitHub</span></div>
+              <div class="skill-pill"><i class="devicon-vscode-plain colored"></i><span>VS Code</span></div>
+              <div class="skill-pill"><span style="font-size: 1.25rem;">✨</span><span>Antigravity</span></div>
+              <div class="skill-pill"><span style="font-size: 1.25rem;">🦈</span><span>Wireshark</span></div>
+            </div>
+          </div>
+
+          <!-- Category 3: Frameworks -->
+          <div class="skill-category" data-reveal="up" data-delay="200">
+            <div class="category-header">
+              <div class="category-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                  <polyline points="2 17 12 22 22 17"></polyline>
+                  <polyline points="2 12 12 17 22 12"></polyline>
+                </svg>
+              </div>
+              <h3 class="category-title">Libraries</h3>
+            </div>
+            <div class="skill-list">
+              <div class="skill-pill"><i class="devicon-opencv-plain colored"></i><span>OpenCV</span></div>
+              <div class="skill-pill"><span style="font-size: 1.25rem;">🎵</span><span>JUCE</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── SECTION 4: PROJECTS ──────────────────────────── -->
+    <section id="projects" aria-label="Projects">
+      <div class="container">
+        <div class="section-header" data-reveal="up">
+          <span class="section-label">Projects</span>
+          <h2 class="section-title">My <span>Proof of Work</span></h2>
+          <div class="section-divider"></div>
+        </div>
+
+        <div class="projects-grid">
+          <!-- Project 1: Bank System -->
+          <div class="project-card" data-reveal="up" data-delay="0">
+            <div class="project-card-inner">
+              <!-- Front Face -->
+              <div class="project-card-front">
+                <div class="project-visual">
+                  <img src="assets/images/bank_system.jfif" alt="Bank System with ATM Interface" loading="lazy" />
+                </div>
+                <div class="project-content">
+                  <div class="project-header">
+                    <h3 class="project-title">Bank System & ATM</h3>
+                  </div>
+                  <p class="project-desc">A complete banking environment simulation focusing on OOP evolution.</p>
+                  <div class="project-footer">
+                    <div class="project-tags">
+                      <span class="badge badge-green">C++</span>
+                      <span class="badge badge-neutral">OOP</span>
+                      <span class="badge badge-neutral">Data Structures</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Back Face -->
+              <div class="project-card-back">
+                <h3 class="project-back-title">Bank System & ATM</h3>
+                <div class="project-narrative">
+                  <div class="narrative-item"><strong>What it does:</strong> Simulates a robust banking system with
+                    employee management, user accounts, and an integrated ATM service.</div>
+                  <div class="narrative-item"><strong>How I built it:</strong> Developed in C++ using core Data
+                    Structures, demonstrating a transition from procedural design to Object-Oriented Programming (OOP).
+                  </div>
+                  <div class="narrative-item"><strong>The Challenge:</strong> Building a secure, persistent file handling
+                    system that manages authentication and polymorphism across different account types securely.</div>
+                </div>
+                <div class="project-links">
+                  <a href="https://github.com/andrew-remon/Bank-System-With-ATM-Service" target="_blank"
+                    rel="noopener noreferrer" class="btn btn-sm btn-outline">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                      <path
+                        d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0 0 22 12.017C22 6.484 17.522 2 12 2z" />
+                    </svg>
+                    Source Code
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 2: Joie Arts -->
+          <div class="project-card" data-reveal="up" data-delay="150">
+            <div class="project-card-inner">
+              <!-- Front Face -->
+              <div class="project-card-front">
+                <div class="project-visual">
+                  <img src="assets/images/project-joie.png" alt="Joie Arts GUI Application" loading="lazy" />
+                </div>
+                <div class="project-content">
+                  <div class="project-header">
+                    <h3 class="project-title">Joie Arts</h3>
+                  </div>
+                  <p class="project-desc">A modern interactive image filter application.</p>
+                  <div class="project-footer">
+                    <div class="project-tags">
+                      <span class="badge badge-green">C++</span>
+                      <span class="badge badge-neutral">Qt Framework</span>
+                      <span class="badge badge-neutral">GUI</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Back Face -->
+              <div class="project-card-back">
+                <h3 class="project-back-title">Joie Arts</h3>
+                <div class="project-narrative">
+                  <div class="narrative-item"><strong>What it does:</strong> Provides an interactive, slider-driven
+                    interface for applying 25+ distinct image edits, transformations, and artistic effects.</div>
+                  <div class="narrative-item"><strong>How I built it:</strong> Developed collaboratively using modern C++
+                    and Qt, focusing on UI encapsulation and polymorphism.</div>
+                  <div class="narrative-item"><strong>The Challenge:</strong> Keeping the GUI highly responsive while
+                    executing heavy image matrix transformations and abstracting filter logic safely via inheritance.
+                  </div>
+                </div>
+                <div class="project-links">
+                  <a href="https://github.com/andrew-remon/Joie-Arts" target="_blank" rel="noopener noreferrer"
+                    class="btn btn-sm btn-outline">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                      <path
+                        d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0 0 22 12.017C22 6.484 17.522 2 12 2z" />
+                    </svg>
+                    Source Code
+                  </a>
+                  <a href="https://www.youtube.com/watch?v=k-BJtO6nvQo" target="_blank" rel="noopener noreferrer"
+                    class="btn btn-sm btn-outline">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                      stroke-linecap="round" stroke-linejoin="round">
+                      <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                    </svg>
+                    Video
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 3: Board Games -->
+          <div class="project-card" data-reveal="up" data-delay="300">
+            <div class="project-card-inner">
+              <!-- Front Face -->
+              <div class="project-card-front">
+                <div class="project-visual">
+                  <img src="assets/images/board_game.jfif" alt="Board Games Hub" loading="lazy" />
+                </div>
+                <div class="project-content">
+                  <div class="project-header">
+                    <h3 class="project-title">Board Games Hub</h3>
+                  </div>
+                  <p class="project-desc">A unified console hub hosting 14 distinct classic board games.</p>
+                  <div class="project-footer">
+                    <div class="project-tags">
+                      <span class="badge badge-green">C++</span>
+                      <span class="badge badge-neutral">OOP</span>
+                      <span class="badge badge-neutral">Architecture</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Back Face -->
+              <div class="project-card-back">
+                <h3 class="project-back-title">Board Games Hub</h3>
+                <div class="project-narrative">
+                  <div class="narrative-item"><strong>What it does:</strong> Centralizes 14 diverse board games (Connect
+                    Four, Tic Tac Toe, etc.) into a single playable console application.</div>
+                  <div class="narrative-item"><strong>How I built it:</strong> Engineered as a team utilizing strict
+                    Object-Oriented design patterns in C++.</div>
+                  <div class="narrative-item"><strong>The Challenge:</strong> Designing a scalable, polymorphic
+                    architecture capable of abstracting grid validation, win conditions, and unique rulesets for 14
+                    entirely different games.</div>
+                </div>
+                <div class="project-links">
+                  <a href="https://github.com/andrew-remon/Board-Games" target="_blank" rel="noopener noreferrer"
+                    class="btn btn-sm btn-outline">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                      <path
+                        d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0 0 22 12.017C22 6.484 17.522 2 12 2z" />
+                    </svg>
+                    Source Code
+                  </a>
+                  <a href="https://drive.google.com/drive/folders/1k4ytRPg9ONzwoQnYU43LPRohU0WpuqfQ" target="_blank"
+                    rel="noopener noreferrer" class="btn btn-sm btn-outline">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                      stroke-linecap="round" stroke-linejoin="round">
+                      <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                    </svg>
+                    Video
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── SECTION 5: LEARNING ──────────────────────────── -->
+    <section id="learning" class="section-alt" aria-label="Currently Learning">
+      <div class="container">
+        <div class="section-header" data-reveal="up">
+          <span class="section-label">Currently Learning</span>
+          <h2 class="section-title">On My <span>Radar</span></h2>
+          <div class="section-divider"></div>
+        </div>
+
+        <div class="kanban-board" data-reveal-group>
+          <!-- Column 1: Started -->
+          <div class="kanban-col">
+            <div class="kanban-col-header">
+              <div class="kanban-indicator"></div>
+              <h3 class="kanban-col-title">Started</h3>
+            </div>
+
+            <div class="kanban-card">
+              <div class="kanban-card-title">
+                <span style="font-size: 1.2rem;">🌐</span> CCNA
+              </div>
+              <div class="kanban-card-desc">
+                Building a strong foundation in network infrastructure, routing protocols, and subnetting.
+              </div>
+            </div>
+          </div>
+
+          <!-- Column 2: In Progress -->
+          <div class="kanban-col">
+            <div class="kanban-col-header">
+              <div class="kanban-indicator"></div>
+              <h3 class="kanban-col-title">In Progress</h3>
+            </div>
+
+            <div class="kanban-card">
+              <div class="kanban-card-title">
+                <span style="font-size: 1.2rem;">🗄️</span> Database Systems
+              </div>
+              <div class="kanban-card-desc">
+                Exploring the backend realm: understanding indexing, query optimization, and normalization.
+              </div>
+            </div>
+          </div>
+
+          <!-- Column 3: Deep Dive -->
+          <div class="kanban-col">
+            <div class="kanban-col-header">
+              <div class="kanban-indicator"></div>
+              <h3 class="kanban-col-title">Deep Dive</h3>
+            </div>
+
+            <div class="kanban-card">
+              <div class="kanban-card-title">
+                <span style="font-size: 1.2rem;">🧩</span> Algorithms
+              </div>
+              <div class="kanban-card-desc">
+                Sharpening problem-solving skills with advanced data structures, dynamic programming, and graph
+                traversal.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── SECTION 6: EDUCATION ─────────────────────────── -->
+    <section id="education" aria-label="Education">
+      <div class="container">
+        <div class="section-header" data-reveal="up">
+          <span class="section-label">Academic Background</span>
+          <h2 class="section-title">Where I'm <span>Learning</span></h2>
+          <div class="section-divider"></div>
+        </div>
+
+        <div class="timeline">
+          <!-- Education -->
+          <div class="timeline-item" data-reveal="up" data-delay="0">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <span class="timeline-date">2024 - Expected 2028</span>
+              <h3 class="timeline-title">B.Sc. in Computer Science</h3>
+              <h4 class="timeline-subtitle">Cairo University</h4>
+              <p class="timeline-desc">
+                Currently in my sophomore year, building a strong foundation in systems, backend architecture, and
+                problem-solving.
+                <br /><br />
+                <strong>Relevant Coursework:</strong> Data Structures, Algorithms, Databases, Computer Networks,
+                Discrete Math, Mathematics, Web Technology.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── SECTION 7: EXPERIENCE ────────────────────────── -->
+    <section id="experience" class="section-alt" aria-label="Experience">
+      <div class="container">
+        <div class="section-header" data-reveal="up">
+          <span class="section-label">Experience</span>
+          <h2 class="section-title">Where I've <span>Contributed</span></h2>
+          <div class="section-divider"></div>
+        </div>
+
+        <div class="timeline">
+          <!-- Experience 1 -->
+          <div class="timeline-item" data-reveal="up" data-delay="0">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <span class="timeline-date">College Activity</span>
+              <h3 class="timeline-title">Marketing Head</h3>
+              <h4 class="timeline-subtitle" style="margin-bottom: var(--space-2);">FCAI Game Dev Club</h4>
+              <!-- Club Socials -->
+              <div style="display: flex; gap: var(--space-3); margin-bottom: var(--space-4);">
+                <a href="https://www.facebook.com/FCA.Cairo.GD.Club" target="_blank" rel="noopener noreferrer"
+                  style="color: var(--text-muted); transition: color 0.3s;"
+                  onmouseover="this.style.color='var(--color-primary)'"
+                  onmouseout="this.style.color='var(--text-muted)'" aria-label="FCAI GD Club Facebook">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                      d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.469h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.469h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+                  </svg>
+                </a>
+                <a href="https://www.instagram.com/fcai_cairogdclub/" target="_blank" rel="noopener noreferrer"
+                  style="color: var(--text-muted); transition: color 0.3s;"
+                  onmouseover="this.style.color='var(--color-primary)'"
+                  onmouseout="this.style.color='var(--text-muted)'" aria-label="FCAI GD Club Instagram">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                  </svg>
+                </a>
+                <a href="https://www.linkedin.com/company/fcai-cu-game-development-club" target="_blank"
+                  rel="noopener noreferrer" style="color: var(--text-muted); transition: color 0.3s;"
+                  onmouseover="this.style.color='var(--color-primary)'"
+                  onmouseout="this.style.color='var(--text-muted)'" aria-label="FCAI GD Club LinkedIn">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                      d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                  </svg>
+                </a>
+              </div>
+              <p class="timeline-desc" style="margin-bottom: var(--space-2);">
+                We (The team and I) build a product (<i>well defined Unity Game Dev Basics Course</i>). 
+                So, we highlight it, emphasize our work and turn our College Student Club to a <u>non-profit small Company</u>.
+              </p>
+              <div class="timeline-desc" style="display: flex; flex-direction: column; gap: var(--space-2);">
+                <div style="display: flex; gap: var(--space-2); align-items: flex-start;"><span
+                    style="color: var(--color-primary);">•</span><span>I built a brand that sticks in the campus by
+                    creating the slogan <strong>"Don't let the world Pixelate you."</strong></span></div>
+                <div style="display: flex; gap: var(--space-2); align-items: flex-start;"><span
+                    style="color: var(--color-primary);">•</span><span>I increased engagement and streamlined member
+                    communications in my first year, growing Facebook followers by over <strong>30%</strong>.</span>
+                </div>
+                <div style="display: flex; gap: var(--space-2); align-items: flex-start;"><span
+                    style="color: var(--color-primary);">•</span><span>I led a successful season-launch campaign as a Marketing Head in just 3
+                    weeks with 20+ posts, resulting in <strong>34K+ Views on Facebook</strong> and <strong>4K+
+                      Impressions on LinkedIn</strong>.</span></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Experience 2 -->
+          <div class="timeline-item" data-reveal="up" data-delay="150">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <span class="timeline-date">Aug 2025 - Sep 2025</span>
+              <h3 class="timeline-title">Digital Marketing Intern</h3>
+              <h4 class="timeline-subtitle">Daleel (Egyptian Agency) - Remote</h4>
+              <p class="timeline-desc" style="margin-bottom: var(--space-2);">
+                This internship was my window to discover how business works and to explore how companies or startups
+                regulate their operations.
+              </p>
+              <div class="timeline-desc" style="display: flex; flex-direction: column; gap: var(--space-2);">
+                <div style="display: flex; gap: var(--space-2); align-items: flex-start;"><span
+                    style="color: var(--color-primary);">•</span><span>Developed a comprehensive marketing strategy for
+                    Daleel.</span></div>
+                <div style="display: flex; gap: var(--space-2); align-items: flex-start;"><span
+                    style="color: var(--color-primary);">•</span><span>Formulated a 6-month launch marketing strategy
+                    for <strong>"Darb"</strong>, an upcoming Syrian ride-hailing service.</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── SECTION 8: BLOG ──────────────────────────────── -->
+    <section id="blog" aria-label="Blog and Writing">
+      <div class="container">
+        <div class="section-header" data-reveal="up">
+          <span class="section-label">Writing</span>
+          <h2 class="section-title">My <span>Blog & Notes</span></h2>
+          <h3 class="section-subtitle">
+            "Imagine if your next boss didn’t have to read your résumé because he already reads your blog"
+            <br><span class="quote-attribution">— Austin Kleon, <cite>Show Your Work!</cite></span>
+          </h3>
+          <div class="section-divider"></div>
+        </div>
+
+        <div class="blog-grid" data-reveal-group>
+          <!-- Blog 1 -->
+          <a href="https://www.linkedin.com/posts/andrewremon_%D9%87%D9%88-%D8%A7%D9%86%D8%AA-%D8%A8%D8%AA%D9%83%D8%AA%D8%A8-%D9%83%D9%88%D8%AF-%D8%A8%D8%A5%D9%8A%D8%AF%D9%83-%D8%AF%D9%84%D9%88%D9%82%D8%AA%D9%8A-%D9%85%D8%B4%D9%83%D9%84%D8%AA%D9%8A-%D9%85%D8%B9-activity-7454168792353529856-nCqE?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFUcwuwBaXfVPDhKSvp60mx6x5-tT3axETE"
+            target="_blank" rel="noopener noreferrer" class="blog-card"
+            aria-label="Coding Skill in AI Era for an entry level CS Student">
+            <div class="blog-meta">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+              </svg>
+              LinkedIn Post
+            </div>
+            <h3 class="blog-title">Coding Skill in AI Era for an entry level CS Student.</h3>
+            <span class="blog-link">
+              Read Post <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </span>
+          </a>
+
+          <!-- Blog 2 -->
+          <a href="https://www.linkedin.com/posts/andrewremon_cpp-banksystem-oop-activity-7375556900286906368-mT44?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFUcwuwBaXfVPDhKSvp60mx6x5-tT3axETE"
+            target="_blank" rel="noopener noreferrer" class="blog-card" aria-label="How Bank System shape my thinking">
+            <div class="blog-meta">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+              </svg>
+              LinkedIn Post
+            </div>
+            <h3 class="blog-title">How Bank System shape my thinking.</h3>
+            <span class="blog-link">
+              Read Post <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </span>
+          </a>
+
+          <!-- Blog 3 -->
+          <a href="https://www.linkedin.com/posts/andrewremon_%D8%A3%D9%86%D8%A7-%D8%A5%D9%84%D9%8A-%D8%AD%D8%AF-%D9%83%D8%A8%D9%8A%D8%B1-%D8%A7%D9%84%D9%86%D8%AB%D8%B1-%D8%A7%D9%84%D8%B0%D9%8A-%D8%A3%D9%83%D8%AA%D8%A8%D9%87-%D8%A3%D9%86%D8%A8%D8%B3%D8%B7-activity-7426648575096492032-pvQR?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFUcwuwBaXfVPDhKSvp60mx6x5-tT3axETE"
+            target="_blank" rel="noopener noreferrer" class="blog-card"
+            aria-label="Post Leading Event Reflections as a Marketing Head in FCAI GD Club">
+            <div class="blog-meta">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+              </svg>
+              LinkedIn Post
+            </div>
+            <h3 class="blog-title">Post Leading Event Reflections as a Marketing Head in FCAI GD Club.</h3>
+            <span class="blog-link">
+              Read Post <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </span>
+          </a>
+
+          <!-- Blog 4 -->
+          <a href="https://www.linkedin.com/posts/andrewremon_%D8%B1%D8%AD%D9%84%D8%AA%D9%8A-%D9%85%D9%86-%D9%85%D9%8A%D9%85-%D9%84%D9%88%D8%B1%D8%AF-%D9%84-%D8%B9%D9%86%D8%AF%D9%8A-marketing-strategy-activity-7394049283525660673-9XNV?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFUcwuwBaXfVPDhKSvp60mx6x5-tT3axETE"
+            target="_blank" rel="noopener noreferrer" class="blog-card"
+            aria-label="My Journey to explore Business with Digital Marketing Lens Through 'Daleel'">
+            <div class="blog-meta">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+              </svg>
+              LinkedIn Post
+            </div>
+            <h3 class="blog-title">My Journey to explore Business with Digital Marketing Lens Through 'Daleel'.</h3>
+            <span class="blog-link">
+              Read Post <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </span>
+          </a>
+
+          <!-- Blog 5 -->
+          <a href="https://www.linkedin.com/posts/andrewremon_facebook-activity-7361012917720203266-re-Q?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFUcwuwBaXfVPDhKSvp60mx6x5-tT3axETE"
+            target="_blank" rel="noopener noreferrer" class="blog-card"
+            aria-label="How I become Social Media Tolerant in just one click.">
+            <div class="blog-meta">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+              </svg>
+              LinkedIn Post
+            </div>
+            <h3 class="blog-title">How I become Social Media Tolerant in just one click.</h3>
+            <span class="blog-link">
+              Read Post <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </span>
+          </a>
+
+          <!-- Blog 6 -->
+          <a href="https://www.linkedin.com/posts/andrewremon_mindset-personalabrbranding-linkedin-share-7366117642451042305-QIjt?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFUcwuwBaXfVPDhKSvp60mx6x5-tT3axETE"
+            target="_blank" rel="noopener noreferrer" class="blog-card"
+            aria-label="How CS Students build a personal brand on LinkedIn">
+            <div class="blog-meta">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+              </svg>
+              LinkedIn Post
+            </div>
+            <h3 class="blog-title">How CS Students build a personal brand on LinkedIn.</h3>
+            <span class="blog-link">
+              Read Post <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── SECTION 9: CONTACT ───────────────────────────── -->
+    <section id="contact" class="section-alt" aria-label="Contact Me">
+      <div class="contact-bg-glow" aria-hidden="true"></div>
+      <div class="container">
+        <div class="section-header" data-reveal="up">
+          <span class="section-label">Get In Touch</span>
+          <h2 class="section-title">Let's <span>Connect</span></h2>
+          <div class="section-divider"></div>
+        </div>
+
+        <div class="contact-grid">
+          <!-- Info only (Centered) -->
+          <div class="contact-info" data-reveal="up">
+            <h3 class="contact-info-title">Looking for a Backend or Systems Intern?</h3>
+            <p class="contact-info-desc">
+              I'm always open to discussing new opportunities, exploring low-level systems, or just geeking out over
+              computer architecture. Feel free to reach out! Je vous attends ;)
+            </p>
+            <div class="contact-methods">
+              <a href="mailto:andrewremon2005@outlook.com" class="contact-method">
+                <div class="method-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                    <polyline points="22,6 12,13 2,6"></polyline>
+                  </svg></div>
+                <span>andrewremon2005@outlook.com</span>
+              </a>
+              <!-- LinkedIn -->
+              <a href="https://linkedin.com/in/andrew-remon" class="contact-method" target="_blank"
+                rel="noopener noreferrer">
+                <div class="method-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                    <rect x="2" y="9" width="4" height="12"></rect>
+                    <circle cx="4" cy="4" r="2"></circle>
+                  </svg></div>
+                <span>linkedin.com/in/andrew-remon</span>
+              </a>
+              <!-- GitHub -->
+              <a href="https://github.com/andrew-remon" class="contact-method" target="_blank"
+                rel="noopener noreferrer">
+                <div class="method-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                      d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0 0 22 12.017C22 6.484 17.522 2 12 2z" />
+                  </svg></div>
+                <span>github.com/andrew-remon</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ═══════════════════════════════════════════════════════
+       FOOTER (stub — will be completed last)
+  ═══════════════════════════════════════════════════════ -->
+  <footer id="footer" role="contentinfo">
+    <div class="container">
+      <p style="text-align:center; color: var(--text-muted); padding: 2rem 0; font-size: 0.875rem;">
+        © 2026 <i>Andrew Remon</i>. <br> <strong>Stay Hungry, Stay Foolish.</strong>
+      </p>
+    </div>
+  </footer>
+
+  <!-- Back to Top -->
+  <button id="back-to-top" aria-label="Back to top">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+      stroke-linejoin="round" aria-hidden="true">
+      <polyline points="18 15 12 9 6 15" />
+    </svg>
+  </button>
+
+  <!-- Scripts -->
+  <script type="module" src="js/main.js"></script>
+
+</body>
+
+</html>
