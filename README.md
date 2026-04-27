@@ -1,32 +1,32 @@
-# Andrew Remon
+# Andrew Remon — Portfolio
 
 *"How can such a small machine perform complex calculations in mere fractions of a second?"*
 
-That question drives my journey. I am a CS Sophomore at Cairo University (Class of 2028). I study computers from the inside out. I build things, break them, and learn why they work. 
+That single question sparked a curiosity that led me to explore the evolution and development of computers. I am a CS sophomore at Cairo University (Class of 2028), diving deep into the foundations of computing to understand exactly how things work from the ground up.
 
-I focus on Backend Development, Security, and Systems Programming. Instead of just using frameworks, I aim to build the efficient, secure systems that power them.
+I am drawn to the intersections of Backend Development, Security, and Systems Programming. Instead of just using frameworks, I want to build the efficient, secure systems that power them.
 
 ## The Codebase
-This repository contains my personal portfolio. Built from scratch. No heavy frameworks.
-- **HTML5/CSS3**: Custom layout, modular architecture, 3D transforms.
-- **Vanilla JavaScript**: Theme toggling, responsive navigation, scroll animations.
+This repository contains my personal portfolio. Built from scratch without heavy frameworks.
+- **HTML5/CSS3**: Custom layouts, CSS variables, 3D transforms.
+- **JavaScript**: Theme toggling, responsive navigation, scroll animations.
 
-## My Work
-I write code to understand systems:
-- **Bank System & ATM**: A C++ simulation modeling an entire banking environment. Designed to trace the evolution from procedural logic to robust Object-Oriented Programming and secure file handling.
-- **Joie Arts**: An interactive C++ & Qt GUI application. Built to apply 25+ distinct matrix transformations and image edits while maintaining a highly responsive UI.
-- **Board Games Hub**: A centralized C++ console architecture hosting 14 distinct classic board games. Engineered using strict polymorphic design patterns to abstract complex grid validations and rulesets.
+## Proof of Work
+- **Bank System & ATM**: C++ simulation of a banking environment. Traces the evolution from procedural logic to robust Object-Oriented Programming and secure file handling.
+- **Joie Arts**: Interactive C++ & Qt GUI application. Applies 25+ distinct matrix transformations and image edits while maintaining a highly responsive UI.
+- **Board Games Hub**: Centralized C++ console architecture hosting 14 distinct classic board games. Designed with scalable polymorphic patterns to abstract complex grid validations.
 
-## Experience & Growth
-I look beyond code:
-- **FCAI Game Dev Club (Marketing Head)**: Built the brand *"Don't let the world Pixelate you."* Grew engagement, led campaigns, and transformed a student club into a structured team.
+## Experience & Learning
+- **FCAI Game Dev Club (Marketing Head)**: Built the campus brand *"Don't let the world Pixelate you"*. Led campaigns, grew engagement, and turned a student club into a structured operation.
 - **Daleel (Digital Marketing Intern)**: Discovered how business operates. Formulated launch strategies and mapped out comprehensive marketing plans.
-
-Currently expanding my foundation with CCNA, Database Systems, and advanced Algorithms. 
-
-*"Stay Hungry, Stay Foolish."*
+- **Currently Learning**: CCNA, Database Systems, Algorithms.
 
 ## Connect
 - [GitHub](https://github.com/andrew-remon)
 - [LinkedIn](https://www.linkedin.com/in/andrewremon/)
 - [LeetCode](https://leetcode.com/u/andrewremon/)
+
+## How It Started
+This portfolio serves as a final project for my journey into Prompt Engineering. The entire codebase was vibe coded from scratch using Antigravity, demonstrating the seamless intersection of human creativity and agentic AI.
+
+*"Stay Hungry, Stay Foolish."*
