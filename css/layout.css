@@ -124,14 +124,20 @@ section {
 .gap-8  { gap: var(--space-8); }
 
 /* ── Alternating Section Backgrounds ──────────────────────── */
-section:nth-child(even) .section-bg {
-  background: var(--bg-secondary);
+section:nth-of-type(even) {
+  background-color: var(--bg-secondary);
 }
 
-.section-alt {
-  background: var(--bg-secondary);
-  transition: background-color var(--transition-slow);
+section:nth-of-type(odd) {
+  background-color: var(--bg-primary);
 }
+
+/* Ensure hero gradient takes precedence if needed, 
+   though ID selector already handles this */
+#hero {
+  background: var(--gradient-hero);
+}
+
 
 /* ── Divider ───────────────────────────────────────────────── */
 .section-divider {
