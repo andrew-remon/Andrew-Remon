@@ -9,6 +9,7 @@ import ScrollReveal from './scroll-reveal.js';
 import BackToTop    from './back-to-top.js';
 
 import ProjectCards from './project-cards.js';
+import { initTilt } from './tilt.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   // Apply theme immediately (before paint) to avoid flash
@@ -20,6 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
   BackToTop.init();
 
   ProjectCards.init();
+  initTilt();
 
   // Fade in page on load
   document.body.classList.add('page-loaded');

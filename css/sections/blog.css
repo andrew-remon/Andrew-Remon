@@ -22,14 +22,15 @@
   border-radius: var(--radius-lg);
   padding: var(--space-6);
   text-decoration: none;
-  transition: transform var(--transition-spring), box-shadow var(--transition-base), border-color var(--transition-base);
+  transition: transform 0.7s cubic-bezier(0.23, 1, 0.32, 1), box-shadow var(--transition-base), border-color var(--transition-base);
   height: 100%;
+  transform-style: preserve-3d;
+  will-change: transform;
 }
 
 .blog-card:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-md);
-  border-color: rgba(29, 158, 117, 0.4);
+  box-shadow: var(--shadow-lg);
+  border-color: rgba(29, 158, 117, 0.6);
 }
 
 .blog-meta {
