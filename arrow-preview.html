@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Arrow Preview</title>
+<style>
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+  }
+  svg {
+    width: 200px;
+    height: 200px;
+    background: white;
+    border: 1px solid #ccc;
+  }
+</style>
+</head>
+<body>
+  <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <!-- The orient="auto" makes the arrowhead automatically align with the path! -->
+      <marker id="arrowhead" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+        <polygon points="0 0, 8 4, 0 8" fill="black" />
+      </marker>
+    </defs>
+    
+    <!-- Path with loop -->
+    <path d="M 15,80 
+             C 40,40 80,30 60,60 
+             C 40,90 20,60 40,40 
+             C 55,25 70,25 85,30" 
+          fill="none" 
+          stroke="black" 
+          stroke-width="3" 
+          stroke-dasharray="6, 6" 
+          stroke-linecap="round"
+          marker-end="url(#arrowhead)" />
+  </svg>
+</body>
+</html>

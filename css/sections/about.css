@@ -133,6 +133,24 @@
   font-weight: 500;
 }
 
+/* Clickable Fact (Writing -> Blog) */
+.clickable-fact {
+  text-decoration: none;
+  cursor: pointer;
+  padding: 4px 14px;
+  margin-left: -14px;
+  width: max-content; /* Tightly wrap emoji and text */
+  border: 1px solid transparent;
+  border-radius: var(--radius-full); /* Oval shape over the whole item */
+  transition: border-color var(--transition-base), background-color var(--transition-base), transform var(--transition-spring);
+}
+
+.clickable-fact:hover {
+  border-color: var(--color-primary); /* Adapts to light/dark automatically */
+  background-color: var(--bg-accent);
+  transform: translateX(4px);
+}
+
 /* Languages Row */
 .lang-row {
   display: flex;
@@ -146,5 +164,98 @@
   .about-grid {
     grid-template-columns: 1fr;
     gap: var(--space-8);
+  }
+}
+
+/* ── Reading Annotation ──────────────────────────────────────── */
+.reading-fact-item {
+  position: relative;
+}
+
+.annotation-text {
+  position: absolute;
+  top: 50%;
+  left: 147px; /* Moved 10px right */
+  margin-top: 5px; /* Elevated 20px up, then 5px down */
+  font-family: 'Indie Flower', cursive;
+  font-size: 0.95rem;
+  font-weight: bold;
+  color: var(--color-highlighter); /* Vibrant accent color */
+  transform: translateY(-50%) rotate(5deg) translateY(12px);
+  white-space: nowrap;
+  pointer-events: none;
+  z-index: 5;
+  opacity: 0; /* Hidden until animated */
+}
+
+/* Trigger animation when the parent sidebar becomes visible */
+.about-sidebar.is-visible .annotation-text {
+  opacity: 1;
+  animation: fade-in-text 0.5s ease-out 1.3s backwards, float-text 3s ease-in-out infinite 1.8s;
+}
+
+.annotation-arrow {
+  position: absolute;
+  top: 50%;
+  left: 95px; /* Moved 10px right */
+  margin-top: 25px; /* Align vertical shift with text */
+  width: 40px;
+  height: 40px;
+  color: var(--color-highlighter); /* Inherited by svg fill="currentColor" */
+  transform: translateY(-50%) scaleX(-1) rotate(70deg); /* rotated 30 degrees right */
+  pointer-events: none;
+  z-index: 5;
+  clip-path: inset(0 100% 0 0); /* Start hidden by clipping 100% from the right */
+}
+
+/* Trigger animation when the parent sidebar becomes visible */
+.about-sidebar.is-visible .annotation-arrow {
+  clip-path: inset(0 0 0 0);
+  animation: draw-arrow 1s ease-out 0.5s backwards, float-arrow 3s ease-in-out infinite 1.5s;
+}
+
+@keyframes draw-arrow {
+  0% {
+    clip-path: inset(0 100% 0 0);
+  }
+  100% {
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+@keyframes fade-in-text {
+  0% {
+    opacity: 0;
+    transform: translateY(-50%) rotate(5deg) translateY(12px) translateX(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(-50%) rotate(5deg) translateY(12px) translateX(0);
+  }
+}
+
+/* Specific floating override to preserve individual transform chains */
+@keyframes float-text {
+  0%, 100% {
+    transform: translateY(-50%) rotate(5deg) translateY(12px) translateX(0);
+  }
+  50% {
+    transform: translateY(-50%) rotate(5deg) translateY(12px) translateX(-4px);
+  }
+}
+
+@keyframes float-arrow {
+  0%, 100% {
+    transform: translateY(-50%) scaleX(-1) rotate(70deg) translateX(0);
+  }
+  50% {
+    transform: translateY(-50%) scaleX(-1) rotate(70deg) translateX(-4px);
+  }
+}
+
+/* Hide on very small screens to avoid overflow */
+@media (max-width: 450px) {
+  .annotation-text, .annotation-arrow {
+    display: none;
   }
 }

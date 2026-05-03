@@ -19,6 +19,8 @@
   --color-cta:       #185FA5;
   --color-cta-hover: #0E4A82;
 
+  --color-highlighter: #F59E0B; /* Vibrant yellow/orange for light mode */
+
   --border:          #D8E2EB;
   --border-light:    #EBF1F6;
 
@@ -100,6 +102,8 @@
   --color-primary-hover: #22A87A;
   --color-cta:       #4A9FE5;
   --color-cta-hover: #6BB8F0;
+
+  --color-highlighter: #34D399; /* Neon mint for dark mode */
 
   --border:          #1E3450;
   --border-light:    #162B42;
